@@ -20,14 +20,57 @@
             <button id="login" class="btn btn-success">Enter</button>
         </div>
     </div>
-  
+    <div id="transaction-area">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h2>Deposit</h2>
+                    <h1>$00</h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status">
+                    <h2>withdraw</h2>
+                    <h1>$00</h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance status">
+                    <h2>Balance</h2>
+                    <h1>$1000</h1>
+                </div>
+            </div>
+        </div>
 
-    <script>
-        const loginBtn = document.getElementById("login");
-        loginBtn.addEventListener("click", function(){
+        <div class="row justify-content-around">
+            <div class="col-md-5 ">
+                <div class="submit-area">
+                    <h4>Deposit</h4>
+                    <input type="text" class="form-control" placeholder="enter your deposit amount">
+                    <br>
+                    <button class="btn btn-success">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-5 ">
+                <div class="submit-area">
+                    <h4>Withdraw</h4>
+                    <input type="text" class="form-control" placeholder="enter your withdraw amount">
+                    <br>
+                    <button class="btn btn-success">withdraw</button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            const loginBtn = document.getElementById("login");
+            loginBtn.addEventListener("click", function(){
             const loginArea =document.getElementById("login-area")
             loginArea.style.display = "none";
-        })
-    </script>
+            const transactionArea = document.getElementById("transaction-area");
+            transactionArea.style.display = 'block';
+             })
+
+        </script>
+                        
 </body>
 </html>
